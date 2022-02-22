@@ -1,35 +1,29 @@
-import React from './react';
-// import React from 'react';
-import ReactDOM from 'react-dom';
+import React from './react.js';
+import ReactDOM from './react-dom.js';
 
 // jsx 其实是一种特殊语法，在webpack打包的时候，会通过babel转化为react.createElement 对象
+
+let style = {
+  border: '3px solid red',
+  margin: '5px',
+};
+
 let element = (
-  <div id="A1">
-    <div id="B1">
-      <div id="C1"></div>
-      <div id="C2"></div>
+  <div id="A1" style={style}>
+    A1
+    <div id="B1" style={style}>
+      B1
+      <div id="C1" style={style}>
+        C1
+      </div>
+      <div id="C2" style={style}>
+        C2
+      </div>
     </div>
-    <div id="B2"></div>
+    <div id="B2" style={style}>
+      B2
+    </div>
   </div>
 );
 
-/* 
-React.createElement(type, props, ...children);
-虚拟dom: 一个js对象，以js对象的方式描述洁面上dom的样子。
-
-let element = React.createElement("div", {
-  id: "A1"
-}, React.createElement("div", {
-  id: "B1"
-}, React.createElement("div", {
-  id: "C1"
-}), React.createElement("div", {
-  id: "C2"
-})), React.createElement("div", {
-  id: "B2"
-}));
-
-
-*/
-console.log('element:', element);
-// ReactDOM.render(element, document.getElementById('root'));
+ReactDOM.render(element, document.getElementById('root'));

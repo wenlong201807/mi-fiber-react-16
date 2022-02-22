@@ -16,3 +16,12 @@ export const PLACEMENT = Symbol.for('PLACEMENT');
 export const DELETION = Symbol.for('DELETION');
 //更新节点
 export const UPDATE = Symbol.for('UPDATE');
+
+
+/*
+
+约定模式如下
+
+文本节点的话 fiber是: {tag: TAG_TEXT, type: ELEMENT_TEXT }
+
+*/ 
