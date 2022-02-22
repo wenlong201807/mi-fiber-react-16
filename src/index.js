@@ -1,17 +1,35 @@
-import React from 'react';
+import React from './react';
+// import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// jsx 其实是一种特殊语法，在webpack打包的时候，会通过babel转化为react.createElement 对象
+let element = (
+  <div id="A1">
+    <div id="B1">
+      <div id="C1"></div>
+      <div id="C2"></div>
+    </div>
+    <div id="B2"></div>
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+/* 
+React.createElement(type, props, ...children);
+虚拟dom: 一个js对象，以js对象的方式描述洁面上dom的样子。
+
+let element = React.createElement("div", {
+  id: "A1"
+}, React.createElement("div", {
+  id: "B1"
+}, React.createElement("div", {
+  id: "C1"
+}), React.createElement("div", {
+  id: "C2"
+})), React.createElement("div", {
+  id: "B2"
+}));
+
+
+*/
+console.log('element:', element);
+// ReactDOM.render(element, document.getElementById('root'));
