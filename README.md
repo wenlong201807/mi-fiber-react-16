@@ -3,7 +3,7 @@
 1 实现虚拟dom 🐶 feat/createElement
   - createElement方法
 
-2 实现初次渲染 feat/render
+2 实现初次渲染 feat/first-render 成功
   - beginWork() 创建fiber
   - completeUnitOfWork() 收集effect
   - 跳过的内容: 调度、合成事件
