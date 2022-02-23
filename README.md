@@ -8,7 +8,7 @@
   - completeUnitOfWork() 收集effect
   - 跳过的内容: 调度、合成事件
 
-3 实现元素的更新
+3 实现元素的更新 feat/update-render
 
 4 实现类组件
 
