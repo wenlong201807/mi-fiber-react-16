@@ -1,0 +1,22 @@
+
+- 查看本地分支与远程分支的对应关系
+git branch -aa
+remotes/origin/HEAD
+remotes/origin/part1
+
+- 本地拉取指定远程分支
+git checkout -b part1 origin/part1
+
+
+
+
+
+
+
+
+
+
+
+
+
+

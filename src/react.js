@@ -19,8 +19,8 @@ import {ELEMENT_TEXT} from './constants';
  */
 function createElement(type, config, ...children) {
   // delete 这两项是babel编译出来的，无实际用处
-  delete config.__self;
-  delete config.__source;// 表示这个元素是在哪行哪列哪个文件生成的
+  // delete config.__self;
+  // delete config.__source;// 表示这个元素是在哪行哪列哪个文件生成的
   return {
     type,
     props: {
@@ -29,6 +29,7 @@ function createElement(type, config, ...children) {
         //兼容处理，如果是react元素返回自己，如果是文本类型，如果是一个字符串的话，返回元素对象
         //比方说B1文本那么就是["B1文本"]改为了
         //{type:Symbol(ELEMENT_TEXT),props:{text:"B1文本",children:[]}}也不可能有children了
+        console.log('typeof child:', typeof child)
         return typeof child === 'object'
           ? child
           : {

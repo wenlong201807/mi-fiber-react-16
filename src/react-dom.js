@@ -5,8 +5,8 @@ import { scheduleRoot } from './schedule';
  * @param {*} element 元素
  * @param {*} container 容器
  */
+// [无误]
 function render(element, container) {
-  // debugger
   let rootFiber = {
     tag: TAG_ROOT, //每个fiber会有一个tag标示此元素类型
     stateNode: container, //一般情况下如果这个元素是一个原生节点的话，stateNode指向真实DOM元素
